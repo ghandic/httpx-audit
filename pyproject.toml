@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "httpx-audit"
+version = "0.1.0"
+description = ""
+authors = ["ghandic <andrewchallis@hotmail.co.uk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+httpx = "^0.23.3"
+pydantic = "^1.10.4"
+jsonpath-ng = "^1.5.3"
+uplink = "^0.9.7"
+aiopath = "^0.6.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
