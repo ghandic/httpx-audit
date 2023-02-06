@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  demoservice:
+    image: challisa/demoservice
+    container_name: demo-service
+    build:
+      context: ./app
+    ports:
+      - "80:80"
+    depends_on:
+      - otel
+
+  otel:
+    image: otel/opentelemetry-collector-contrib
+    hostname: example.local
+    container_name: otel
+    command: ["--config=/etc/otelcol-config.yml"]
+    volumes:
+      - ./otelcollector/otelcol-config.yml:/etc/otelcol-config.yml
+    environment:
+      - DD_API_KEY=${DD_API_KEY}

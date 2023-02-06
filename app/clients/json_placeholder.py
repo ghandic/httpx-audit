@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from uplink import Consumer, get, Path
+from uplink import Consumer, Path, get
 
 
 class Todo(BaseModel):

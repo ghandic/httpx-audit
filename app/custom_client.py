@@ -1,10 +1,10 @@
+import contextlib
 import inspect
 import json
-import contextlib
 from typing import Any, Callable, Optional
-from pydantic import BaseModel
 
 import httpx
+from pydantic import BaseModel
 
 
 class Request(BaseModel):

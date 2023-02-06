@@ -3,8 +3,8 @@ import contextlib
 import logging
 from functools import wraps
 
-from uplink.clients import exceptions, interfaces, io
 import httpx
+from uplink.clients import exceptions, interfaces, io
 
 log = logging.getLogger("uplink.httpx")
 ssl_context = httpx.create_ssl_context()

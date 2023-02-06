@@ -1,0 +1,13 @@
+services:
+  demoservice:
+    ports:
+      - "80:80"
+      - 5678:5678
+    command:
+      [
+        "sh",
+        "-c",
+        "pip install debugpy && opentelemetry-instrument python -m debugpy --wait-for-client --listen 0.0.0.0:5678 -m uvicorn app:app --host 0.0.0.0 --port 80 --reload",
+      ]
+    volumes:
+      - ./app:/code
